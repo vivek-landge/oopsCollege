@@ -11,9 +11,9 @@ class Company{
         cout << "Company Name :"<< name <<endl;
 
     }
-    void get(){
-        cout << "Enter Company Details :"<< endl ;
-        cin >> name >> estdYr;
+    void get(int e, string n){
+        estdYr = e;
+        name = n;
     }
 };
 class Employee : public Company {
@@ -22,19 +22,19 @@ class Employee : public Company {
     string Name ;
     public:
     void display(){
-        cout << "Employee Name"<< Name <<endl;
+        cout << "Employee Name :"<< Name <<endl;
         cout << "Employee Salary :"<< Salary <<endl;
 
     }
-    void enter(){
-        cout << "Enter Employee Details :"<< endl ;
-        cin >> Name >> Salary;
+    void enter(int S, string n){
+        Name = n;
+        Salary = S;
     }
 };
 int main(){
     Employee E1;
-    E1.get();//take info
-    E1.enter();
+    E1.get(1920,"Bankai");//take info
+    E1.enter(25000 , "Vivek");
 
     E1.set();//show info
     E1.display();
